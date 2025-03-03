@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Contacts</h1>
+    <div id="nav-placeholder"></div>
+
+    <script>
+    fetch("../header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("nav-placeholder").innerHTML = data;
+        });
+    </script>
+    <div class="text">
+        <h1>Контакти</h1>
+        <p>Зв'яжіться з нами через форму нижче або за допомогою вказаних контактних даних.</p>
+
+        <h2>Форма зворотного зв'язку</h2>
+        <form action="/submit" method="POST">
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Повідомлення:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <button type="submit">Надіслати</button>
+        </form>
+
+        <h2>Інші способи зв'язку</h2>
+        <p>Email: hictory_of_art@gmail.com</p>
+        <p>Телефон: +380687938663</p>
+    </div>
 </body>
 </html>

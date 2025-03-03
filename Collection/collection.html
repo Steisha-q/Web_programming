@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collection</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Collection</h1>
+    <div id="nav-placeholder"></div>
+
+    <script>
+    fetch("../header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("nav-placeholder").innerHTML = data;
+        });
+    </script>
+     <div class="collection-container">
+        <div class="collection-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/320px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg">
+            <p><strong>Мона Ліза:</strong> "Мона Ліза" — це одна з найвідоміших картин у світі, написана Леонардо да Вінчі приблизно в 1503–1506 роках. Вона зображує портрет жінки, яка сидить на фоні ландшафту,
+                 з тихою, загадковою усмішкою, яка стала її особливою ознакою.</p>
+        </div>
+
+        <div class="collection-item">
+            <img src="https://th.bing.com/th/id/R.c24423b0c028d8620eaf3130d60c7089?rik=NofLdbAN3Wnv8g&riu=http%3a%2f%2ftaras-shevchenko.com.ua%2ffrontend%2fwebcontent%2fimages%2froboty%2fkaterina.jpg&ehk=0GyNTYm%2fNX4mr%2baIb%2fA1NbpjoHVLB8TkPa%2bYAzTczjM%3d&risl=&pid=ImgRaw&r=0" alt="Art piece 2">
+            <p><strong>Катерина:</strong> "Катерина" — це одна з найвідоміших картин Тараса Шевченка, написана у 1842 році. Вона є ілюстрацією до його поеми «Катерина» (1838), яка розповідає про трагічну долю української дівчини, спокушеної та покинутої офіцером-«москалем».</p>
+        </div>
+
+        <div class="collection-item">
+            <img src="https://www.artprinta.com/cdn/shop/products/AAEG1FA0N_600x.jpg?v=1579020158" alt="Art piece 3">
+            <p><strong>Дівчина з перловою сережкою</strong>“Дівчина з перлинною сережкою” – одна з найвідоміших картин нідерландського художника Яна Вермеєра. Її часто називають північною чи голландською Моною Лізою. Картина підписана “IVMeer”, але не датована. Згідно з даними музею Мауріцхейс, де картина зберігається в цей час, вона була написана близько 1665.</p>
+        </div>
+    </div>
 </body>
 </html>

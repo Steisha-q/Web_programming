@@ -1,0 +1,101 @@
+.navigation  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8b5e3c;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding-top: 0px;
+    background-color: #f5f0e1;
+    color: #333;
+}
+
+
+.text {
+    padding: 10px;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.text h1 {
+    font-size: 36px;
+    color: #8b5e3c;
+    text-align: center;
+}
+
+.text h2 {
+    font-size: 28px;
+    color: #8b5e3c;
+    margin-top: 30px;
+}
+
+.text p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label {
+    font-size: 18px;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #8b5e3c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #7b4c34;
+}
+
+.text p:last-of-type {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}

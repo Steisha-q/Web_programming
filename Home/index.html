@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
     <div id="nav-placeholder"></div>
 
-    <script>
-    fetch("../header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("nav-placeholder").innerHTML = data;
-        });
-    </script>
+        <script>
+        fetch("../header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav-placeholder").innerHTML = data;
+            });
+        </script>
+    </header>
+    
     <div  class="text">
         <h1>Вітаємо на сайті "Історія мистецтва"</h1>
         <div class="grid-container">

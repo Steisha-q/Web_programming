@@ -16,22 +16,92 @@
             document.getElementById("nav-placeholder").innerHTML = data;
         });
     </script>
+
+    <div class="filter-container">
+        <label for="category">Фільтрувати за категорією:</label>
+        <select id="category" onchange="filterCollection()">
+            <option value="all">Все</option>
+            <option value="paintings">Картини</option>
+            <option value="artworks">Твори</option>
+        </select>
+    </div>
+
      <div class="collection-container">
-        <div class="collection-item">
+        <div class="collection-item" data-category="paintings">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/320px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg">
-            <p><strong>Мона Ліза:</strong> "Мона Ліза" — це одна з найвідоміших картин у світі, написана Леонардо да Вінчі приблизно в 1503–1506 роках. Вона зображує портрет жінки, яка сидить на фоні ландшафту,
+            <p><strong>Мона Ліза: </strong> "Мона Ліза" — це одна з найвідоміших картин у світі, написана Леонардо да Вінчі приблизно в 1503–1506 роках. Вона зображує портрет жінки, яка сидить на фоні ландшафту,
                  з тихою, загадковою усмішкою, яка стала її особливою ознакою.</p>
         </div>
 
-        <div class="collection-item">
-            <img src="https://th.bing.com/th/id/R.c24423b0c028d8620eaf3130d60c7089?rik=NofLdbAN3Wnv8g&riu=http%3a%2f%2ftaras-shevchenko.com.ua%2ffrontend%2fwebcontent%2fimages%2froboty%2fkaterina.jpg&ehk=0GyNTYm%2fNX4mr%2baIb%2fA1NbpjoHVLB8TkPa%2bYAzTczjM%3d&risl=&pid=ImgRaw&r=0" alt="Art piece 2">
-            <p><strong>Катерина:</strong> "Катерина" — це одна з найвідоміших картин Тараса Шевченка, написана у 1842 році. Вона є ілюстрацією до його поеми «Катерина» (1838), яка розповідає про трагічну долю української дівчини, спокушеної та покинутої офіцером-«москалем».</p>
+        <div class="collection-item" data-category="artworks">
+            <img src="https://th.bing.com/th/id/R.c24423b0c028d8620eaf3130d60c7089?rik=NofLdbAN3Wnv8g&riu=http%3a%2f%2ftaras-shevchenko.com.ua%2ffrontend%2fwebcontent%2fimages%2froboty%2fkaterina.jpg&ehk=0GyNTYm%2fNX4mr%2baIb%2fA1NbpjoHVLB8TkPa%2bYAzTczjM%3d&risl=&pid=ImgRaw&r=0">
+            <p><strong>Катерина: </strong> "Катерина" — це одна з найвідоміших картин Тараса Шевченка, написана у 1842 році. Вона є ілюстрацією до його поеми «Катерина» (1838), яка розповідає про трагічну долю української дівчини, спокушеної та покинутої офіцером-«москалем».</p>
         </div>
 
-        <div class="collection-item">
-            <img src="https://www.artprinta.com/cdn/shop/products/AAEG1FA0N_600x.jpg?v=1579020158" alt="Art piece 3">
-            <p><strong>Дівчина з перловою сережкою</strong>“Дівчина з перлинною сережкою” – одна з найвідоміших картин нідерландського художника Яна Вермеєра. Її часто називають північною чи голландською Моною Лізою. Картина підписана “IVMeer”, але не датована. Згідно з даними музею Мауріцхейс, де картина зберігається в цей час, вона була написана близько 1665.</p>
+        <div class="collection-item"data-category="paintings">
+            <img src="https://www.artprinta.com/cdn/shop/products/AAEG1FA0N_600x.jpg?v=1579020158" >
+            <p><strong>Дівчина з перловою сережкою: </strong>“Дівчина з перлинною сережкою” – одна з найвідоміших картин нідерландського художника Яна Вермеєра. Її часто називають північною чи голландською Моною Лізою. Картина підписана “IVMeer”, але не датована. Згідно з даними музею Мауріцхейс, де картина зберігається в цей час, вона була написана близько 1665.</p>
+        </div>
+
+        <div class="collection-item"data-category="paintings">
+            <img src="https://f.cultura.city/photo/8698/LpeFC.jpg">
+            <p><strong>Крик: </strong>“Крик” було написано у 1893 році норвезьким художником Едвардом Мунком. На ній зображено агонізуючу від жаху постать людини (в якої немає ознак статі, тобто це може бути як чоловік, так і жінка) на тлі криваво-червоного неба.</p>
+        </div>
+
+        <div class="collection-item"data-category="paintings">
+            <img src="https://f.cultura.city/photo/8702/f0MEX.jpg">
+            <p><strong>Мати Вістлера: </strong>Оригінальна назва картини – “Аранжування в сірому і чорному. Мати художника”. Це одна з найбільш відомих робіт англо-американського художника Джеймса Вістлера. Написана у 1871 році, сьогодні перебуває в музеї д’Орсе в Парижі.</p>
+        </div>
+
+        <div class="collection-item"data-category="paintings">
+            <img src="https://f.cultura.city/photo/8700/J3O00.jpg">
+            <p><strong>Три музиканти: </strong>“Три музиканти” була написана іспанським художником Пабло Пікассо в стилі кубізму. Художник працював над картиною в своєму заміському будинку, який орендував влітку 1921 року разом зі своєю коханою – балериною Ольгою Хохловою.</p>
+        </div>
+
+        <div class="collection-item"data-category="paintings">
+            <img src="https://webp.images-on-off.com/23/153/424x565_epdewf5j17k43qicwpsr.webp">
+            <p><strong>Жінка, яка плаче: </strong>Полотно, написаний маслом, “Жінка, яка плаче” створений Пікассо в 1937 р Вважається, що ця картина є продовженням теми трагедії, яка зображена в Гернике. Малюючи плаче жінку, Пікассо безпосередньо зосередився на людському аспекті страждання і створив унікальний універсальний образ.</p>
+        </div>
+
+        <div class="collection-item"data-category="paintings">
+            <img src="https://i.pinimg.com/736x/54/b3/84/54b3840a8416bf141e3afdf8a52d792f.jpg">
+            <p><strong>Пості́йність пам’яті: </strong>“Пості́йність пам'яті” — картина іспанського художника Сальвадора Далі, написана у 1931 році. Одна з найвідоміших робіт художника. Картина обросла безліччю народних назв: «Профіль часу», «Стікаючий час», «М’які годинники», «Об’єм пам’яті», «Стійкість пам’яті». Експонується в Музеї сучасного мистецтва в Нью-Йорку з 1934 року.</p>
+        </div>
+
+        <div class="collection-item"data-category="paintings">
+            <img src="https://i.pinimg.com/736x/4f/34/d8/4f34d850b62aa262b7aefcac15ed9561.jpg">
+            <p><strong>Нічна тераса кафе: </strong>“Нічна тераса кафе” (нід. Caféterras bij nacht) — картина нідерландського художника Вінсента ван Гога, написана навесні 1888 року в Арлі.</p>
+        </div>
+
+        <div class="collection-item"data-category="paintings">
+            <img src="https://waytravel.com.ua/wp-content/uploads/2024/07/kartyna-zhinka-z-parasolkoiu.jpg">
+            <p><strong></strong></p>
+        </div>
+
+        <div class="collection-item"data-category="paintings">
+            <img src="https://uahistory.co/pidruchniki/avramenko-ukraine-literature-deep-level-8-class-2021/avramenko-ukraine-literature-deep-level-8-class-2021.files/image021.jpg">
+            <p><strong></strong></p>
+        </div>
+
+        <div class="collection-item"data-category="paintings">
+            <img src="https://i.pinimg.com/736x/0f/94/b7/0f94b7b2469570ecd4fe20abb19d8cb5.jpg">
+            <p><strong></strong></p>
         </div>
     </div>
+
+    <script>
+        function filterCollection() {
+            const category = document.getElementById("category").value;
+            const items = document.querySelectorAll(".collection-item");
+
+            items.forEach(item => {
+                if (category === "all" || item.getAttribute("data-category") === category) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
 </body>
 </html>

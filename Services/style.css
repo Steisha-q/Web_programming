@@ -17,6 +17,12 @@
     font-weight: bold;
 }
 
+.navigation .logo {
+    height: 25px; 
+    margin-right: 15px; 
+    vertical-align: middle;
+}
+
 body {
     font-family: 'Times New Roman', serif;
     margin: 0;
@@ -26,17 +32,18 @@ body {
 }
 
 .services-table {
-    width: 100%;
+    width: 60%;
+    margin: 20px auto;
     border-collapse: collapse;
-    margin-top: 20px;
     table-layout: fixed;
 }
 
 .services-table th, .services-table td {
     border: 1px solid #8b5e3c;
-    padding: 12px;
+    padding: 8px;
     text-align: left;
-    width: 33.33%;
+    font-size: 14px;
+    width: 33%;
     vertical-align: middle;
 }
 
@@ -46,15 +53,128 @@ body {
     white-space: nowrap;
 }
 
-.services-table td:first-child {
-    text-align: center;
-}
-
 .services-table img {
     display: block;
     max-width: 100%;
-    height: 150px; 
+    height: 120px; 
     object-fit: cover;
     border-radius: 5px;
     margin: 0 auto;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin-top: auto;  
+}
+
+main.text {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Georgia', serif;
+    color: #6b3e26;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.text{
+    font-size: 18px;
+    color: #444;
+    margin: 10px 0 20px;
+    text-align: justify;
+}
+
+ol {
+    text-align: left;
+    margin: 20px auto;
+    padding-left: 20px;
+    width: 50%;
+}
+
+ol li {
+    font-size: 16px;
+    color: #333;
+    padding: 5px 0;
+}
+
+p strong {
+    color: #8b5e3c;
+    font-weight: bold;
+}
+
+.navigation .menu-toggle {
+    display: none; 
+}
+
+@media screen and (max-width: 900px) {
+    .navigation {
+        text-align: left;
+        padding: 10px; 
+    }
+
+    .navigation a {
+        display: none;
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    .navigation .menu-toggle {
+        display: block;
+        background-color: #8b5e3c;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        cursor: pointer;
+        width: auto; 
+        max-width: 200px;  
+        text-align: left;
+        margin-left: auto;  
+        margin-right: 10px;
+    }
+
+    .navigation.open a {
+        display: block;
+    }
+
+    .navigation a:hover {
+        background-color: #6f4f32;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container img {
+        max-width: 100%;
+    }
+
+    .services-table, .services-table tbody, .services-table tr, .services-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .services-table td {
+        text-align: center;
+        padding: 10px;
+    }
+
+    body {
+        padding-top: 80px;
+    }
 }

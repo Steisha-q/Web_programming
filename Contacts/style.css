@@ -17,6 +17,12 @@
     font-weight: bold;
 }
 
+.navigation .logo {
+    height: 25px; 
+    margin-right: 15px; 
+    vertical-align: middle;
+}
+
 body {
     font-family: 'Times New Roman', serif;
     margin: 0;
@@ -98,4 +104,59 @@ form button:hover {
     font-size: 18px;
     text-align: center;
     color: #333;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin-top: auto;  
+  }
+
+  .navigation .menu-toggle {
+    display: none; 
+}
+
+@media screen and (max-width: 900px) {
+    .navigation {
+        text-align: left;
+        padding: 10px; 
+    }
+
+    .navigation a {
+        display: none;
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    .navigation .menu-toggle {
+        display: block;
+        background-color: #8b5e3c;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        cursor: pointer;
+        width: auto; 
+        max-width: 200px;  
+        text-align: left;
+        margin-left: auto;  
+        margin-right: 10px;
+    }
+
+    .navigation.open a {
+        display: block;
+    }
+
+    .navigation a:hover {
+        background-color: #6f4f32;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container img {
+        max-width: 100%;
+    }
 }

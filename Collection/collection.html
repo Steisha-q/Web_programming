@@ -17,8 +17,15 @@
         });
     </script>
 
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.navigation');
+            nav.classList.toggle('open');
+        }
+    </script>
+
     <div class="filter-container">
-        <label for="category">Фільтрувати за категорією:</label>
+        <label class="label" for="category">Фільтрувати за категорією:</label>
         <select id="category" onchange="filterCollection()">
             <option value="all">Все</option>
             <option value="paintings">Картини</option>
@@ -75,33 +82,42 @@
 
         <div class="collection-item"data-category="paintings">
             <img src="https://waytravel.com.ua/wp-content/uploads/2024/07/kartyna-zhinka-z-parasolkoiu.jpg">
-            <p><strong></strong></p>
+            <p><strong>Жінка з парасолькою: </strong>“Жінка з парасолькою” була написана на пленері, ймовірно за один сеанс в кілька годин. Картина була однією з 18 творів Моне, що були представлені на другій виставці імпресіоністів у квітні 1876 року в галереї Поля Дюран-Рюеля.</p>
         </div>
 
-        <div class="collection-item"data-category="paintings">
+        <div class="collection-item"data-category="artworks">
             <img src="https://uahistory.co/pidruchniki/avramenko-ukraine-literature-deep-level-8-class-2021/avramenko-ukraine-literature-deep-level-8-class-2021.files/image021.jpg">
-            <p><strong></strong></p>
+            <p><strong>Маруся Чурай: </strong>Маруся Чурай — напівлегендарна українська народна співачка та поетеса часів Хмельниччини, яка, за переказами, жила в Полтаві. Їй приписують авторство низки відомих у народі пісень: «Ой не ходи, Грицю», «Котилися вози з гори», «Засвистали козаченьки» тощо.</p>
         </div>
 
         <div class="collection-item"data-category="paintings">
             <img src="https://i.pinimg.com/736x/0f/94/b7/0f94b7b2469570ecd4fe20abb19d8cb5.jpg">
-            <p><strong></strong></p>
+            <p><strong>Великодня утреня: </strong>“Великодня утреня” митець відтворив сільську літургію на одне з найбільших християнських свят – Великдень. Його більше цікавить не сам церковний ритуал, а люди, які зібралися довкола храму, і атмосфера – передчуття радості одного з головних свят</p>
         </div>
     </div>
 
     <script>
         function filterCollection() {
-            const category = document.getElementById("category").value;
-            const items = document.querySelectorAll(".collection-item");
-
-            items.forEach(item => {
-                if (category === "all" || item.getAttribute("data-category") === category) {
-                    item.style.display = "block";
-                } else {
-                    item.style.display = "none";
-                }
-            });
+        const category = document.getElementById("category").value;
+        document.querySelectorAll(".collection-item").forEach(item => {
+            item.style.opacity = "0";
+            setTimeout(() => {
+                item.style.display = (category === "all" || item.dataset.category === category) ? "block" : "none";
+                item.style.opacity = "1";
+            }, 300);
+        });
         }
     </script>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+        <script>
+            fetch("../footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-placeholder").innerHTML = data;
+                });
+        </script>
+    </footer>
 </body>
 </html>

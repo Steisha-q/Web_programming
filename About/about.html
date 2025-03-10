@@ -16,6 +16,14 @@
             document.getElementById("nav-placeholder").innerHTML = data;
         });
     </script>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.navigation');
+            nav.classList.toggle('open');
+        }
+    </script>
+
     <main>
         <section class="about-section">
             <h1>Про нас</h1>
@@ -40,5 +48,16 @@
             <p>Якщо у вас є питання або ви хочете співпрацювати з нами, будь ласка, <a href="../Contacts/contacts.html">зв'яжіться з нами</a>.</p>
         </section>
     </main>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+        <script>
+            fetch("../footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-placeholder").innerHTML = data;
+                });
+        </script>
+    </footer>
 </body>
 </html>

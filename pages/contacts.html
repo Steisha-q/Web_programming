@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <nav>
+        <div class="navigation">
+            <img src="../Logo.png" alt="Логотип" class="logo">
+            <button class="menu-toggle" onclick="toggleMenu()">Меню</button>
+            <a href="../pages/home.html" class="name">Головна</a>
+            <a href="../pages/about.html">Про нас</a>
+            <a href="../pages/services.html">Послуги</a>
+            <a href="../pages/collection.html">Мистецька колекція</a>
+            <a href="../pages/contacts.html">Контакти</a>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.navigation');
+            nav.classList.toggle('open');
+        }
+    </script>
+
+    <div class="contacts">
+        <h1>Контакти</h1>
+        <p>Зв'яжіться з нами через форму нижче або за допомогою вказаних контактних даних.</p>
+
+        <h2>Форма зворотного зв'язку</h2>
+        <form action="/submit" method="POST">
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Повідомлення:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <button type="submit">Надіслати</button>
+        </form>
+
+        <h2>Інші способи зв'язку</h2>
+        <p>Email: hictory_of_art@gmail.com</p>
+        <p>Телефон: +380687938663</p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Hictory Of Art. All rights reserved.</p>
+    </footer>
+</body>
+</html>

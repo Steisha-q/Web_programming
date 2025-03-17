@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <nav>
+        <div class="navigation">
+            <img src="../Logo.png" alt="Логотип" class="logo">
+            <button class="menu-toggle" onclick="toggleMenu()">Меню</button>
+            <a href="../pages/home.html" class="name">Головна</a>
+            <a href="../pages/about.html">Про нас</a>
+            <a href="../pages/services.html">Послуги</a>
+            <a href="../pages/collection.html">Мистецька колекція</a>
+            <a href="../pages/contacts.html">Контакти</a>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.navigation');
+            nav.classList.toggle('open');
+        }
+    </script>
+
+    <main class="text">
+        <h1>Наші послуги</h1>
+        <p class="text">Ми пропонуємо широкий спектр послуг для вивчення мистецтва. Від інтерактивних уроків до персональних консультацій – усе це доступно для наших користувачів.</p>
+
+        <table class="services-table">
+            <thead>
+                <tr>
+                    <th>Зображення</th>
+                    <th>Назва послуги</th>
+                    <th>Опис</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://th.bing.com/th/id/OIP.NCyfMlTL4iLRpr4lEdb02wHaEn?rs=1&pid=ImgDetMain" alt="Онлайн-курси"></td>
+                    <td>Онлайн-курси</td>
+                    <td>Доступ до курсів, що охоплюють історію мистецтва від стародавніх часів до сучасності.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://drasler.ru/wp-content/uploads/2023/02/%D0%A4%D0%BE%D1%82%D0%BE-%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B0-%D0%B2-%D0%BC%D1%83%D0%B7%D0%B5%D1%8F%D1%85_009.jpg" alt="Віртуальні галереї"></td>
+                    <td>Віртуальні галереї</td>
+                    <td>Огляд світових шедеврів із детальним аналізом художніх технік та історичного контексту.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://uaua.top/wp-content/uploads/2019/08/12339247_1033972839957778_3153939697476952106_o.jpg" alt="Консультації"></td>
+                    <td>Персональні консультації</td>
+                    <td>Наші експерти допоможуть вам глибше зрозуміти твори мистецтва та знайти відповіді на запитання.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://i.pinimg.com/originals/88/82/11/888211fc124c9fdd6443b81c22160c42.png" alt="Ігри та вікторини"></td>
+                    <td>Ігри та вікторини</td>
+                    <td>Веселі та навчальні вікторини, що допоможуть закріпити знання про мистецтво.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Як скористатися нашими послугами?</h2>
+        <ol>
+            <li>Зареєструйтесь на сайті.</li>
+            <li>Обирайте курс або послугу, яка вас цікавить.</li>
+            <li>Поринайте у світ мистецтва!</li>
+        </0l>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Hictory Of Art. All rights reserved.</p>
+    </footer>
+</body>
+</html>
